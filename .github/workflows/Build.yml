@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish Apache Image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: chivincent/laravel-php
           username: ${{ github.actor }}
@@ -19,7 +19,7 @@ jobs:
           dockerfile: php-apache.dockerfile
           tags: "apache"
       - name: Publish CLI Image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: chivincent/laravel-php
           username: ${{ github.actor }}
@@ -28,7 +28,7 @@ jobs:
           dockerfile: php-cli.dockerfile
           tags: "latest,cli"
       - name: Publish FPM Image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with: 
           name: chivincent/laravel-php
           username: ${{ github.actor }}
